@@ -366,34 +366,20 @@
         </p>
 
         <!-- NETLIFY FORM (works automatically on Netlify) -->
-        <form name="estimate" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="estimate" />
-
-          <div class="form-row">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required />
-            </div>
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="657-831-0946" required />
-            </div>
-          </div>
-
-          <label for="city">City / Area</label>
-          <input id="city" name="city" type="text" placeholder="Franklin / Highlands / Cashiers / Sylva / Bryson City" />
-
-          <label for="details">Project details</label>
-          <textarea id="details" name="details" placeholder="Example: Living room walls + ceiling. Trim in hallway. Color change? Any patching needed? Room sizes?"></textarea>
-
-          <div class="form-actions">
-            <button class="btn primary" type="submit">Send Request</button>
-            <a class="btn" href="pricing.html">View Pricing</a>
-            <a class="btn" href="sms:+16578310946?body=Hi%20Nantahala%20Interior%20Painting%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20My%20city%20is%20____.%20Project%3A%20____.%20Room%20sizes%3A%20____.%20Color%20change%3A%20Yes%2FNo.%20I%E2%80%99ll%20attach%20photos.">Text for Quote</a>
-          </div>
-
-          <p class="note">By submitting, you agree to be contacted by call/text about your estimate.</p>
-        </form>
+     <div style="text-align:center; margin-top:30px;">
+  <a href="sms:6578310946" style="
+    display:inline-block;
+    padding:16px 28px;
+    background:#1e63d6;
+    color:white;
+    font-weight:600;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:18px;
+  ">
+    Text 657-831-0946 for a Free Estimate
+  </a>
+</div>
       </section>
 
     </main>
@@ -409,4 +395,5 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
