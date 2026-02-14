@@ -1,18 +1,38 @@
-<!-- index.html
-     Put this file in the SAME folder as:
-     - pricing.html
-     - logo.png
-     - NIPLLC Price Sheet.pdf
--->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Interior Painter in Franklin, NC | Nantahala Interior Painting</title>
-  <meta name="description" content="Interior painter based in Franklin, NC. Nantahala Interior Painting serves Franklin, Highlands, Cashiers, Sylva, and Bryson City. Call or text 657-831-0946 for a free estimate." />
+  <title>Nantahala Interior Painting | Interior Painter in Franklin, NC</title>
+  <meta name="description" content="Professional interior painting in Franklin, NC. Clean lines, tidy jobsite, and straightforward pricing. Text photos and room sizes for a fast quote." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nantahala Interior Painting | Franklin, NC" />
+  <meta property="og:description" content="Owner-operated interior painting with straightforward pricing. Text photos + room sizes for a fast quote." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nantahala Interior Painting",
+    "image": "logo.png",
+    "telephone": "+16578310946",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Franklin",
+      "addressRegion": "NC",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Franklin NC","Highlands NC","Cashiers NC","Sylva NC","Bryson City NC","Macon County","Jackson County","Swain County"],
+    "description": "Professional interior painting in Franklin, NC with straightforward pricing and clean, respectful workmanship."
+  }
+  </script>
 
   <style>
     :root{
@@ -20,380 +40,301 @@
       --card:#ffffff;
       --text:#16212b;
       --muted:#4c5b6b;
-      --line:#e6ebf1;
-      --brand:#0b6cff;
-      --brand2:#0a4fb8;
-      --shadow: 0 10px 30px rgba(16,24,40,.08);
+      --line:#e7edf3;
+      --blue:#1e63d6;
+      --blue2:#0f52c5;
+      --shadow: 0 10px 24px rgba(16, 24, 40, .08);
       --radius: 18px;
       --max: 980px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      background:var(--bg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(900px 600px at 50% 0%, #ffffff 0%, var(--bg) 55%);
       color:var(--text);
+      line-height:1.5;
     }
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:22px}
-
-    /* Top Nav */
-    .topbar{
+    .wrap{max-width:var(--max); margin:0 auto; padding:18px 16px 48px;}
+    header{
       display:flex;
+      align-items:center;
       justify-content:space-between;
+      gap:12px;
+      padding:14px 0 10px;
+    }
+    .brand{
+      display:flex;
       align-items:center;
       gap:10px;
-      flex-wrap:wrap;
-      margin-bottom:14px;
+      text-decoration:none;
+      min-width:0;
+    }
+    .brand img{
+      width:38px;
+      height:38px;
+      border-radius:10px;
+      object-fit:contain;
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    .brand strong{
+      font-size:16px;
+      letter-spacing:.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
     .nav{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      align-items:center;
+      justify-content:flex-end;
     }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#fff;
-      text-decoration:none;
-      font-weight:800;
-      font-size:14px;
-      transition:transform .08s ease, box-shadow .2s ease;
-      box-shadow: 0 3px 10px rgba(16,24,40,.05);
-      white-space:nowrap;
-    }
-    .btn:hover{box-shadow: 0 10px 18px rgba(16,24,40,.08)}
-    .btn:active{transform:translateY(1px)}
-    .btn.primary{
-      background: linear-gradient(180deg, var(--brand), var(--brand2));
-      color:#fff;
-      border-color: transparent;
-      box-shadow: 0 10px 24px rgba(11,108,255,.22);
-    }
-
-    /* Main Card */
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:22px;
-    }
-
-    /* Centered Logo */
-    .logo-center{
-      display:flex;
-      justify-content:center;
-      margin:8px 0 6px;
-    }
-    .logo-center img{
-      width:min(520px, 92%);
-      height:auto;
-      display:block;
-    }
-
-    /* Hero */
-    .headline{
-      text-align:center;
-      margin-top:10px;
-    }
-    .headline h1{
-      margin:10px 0 8px;
-      font-size:30px;
-      line-height:1.15;
-      letter-spacing:.2px;
-    }
-    .headline p{
-      margin:0 auto;
-      max-width:780px;
-      color:var(--muted);
-      line-height:1.6;
-      font-size:16px;
-    }
-
-    .quick-actions{
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      flex-wrap:wrap;
-      margin:16px 0 6px;
-    }
-
-    .badges{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:12px 0 0;
-      color:var(--muted);
-      font-weight:700;
-      font-size:13px;
-    }
-    .badge{
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius:999px;
-      padding:8px 10px;
-    }
-
-    /* Sections */
-    .section{margin-top:14px}
-    h2{margin:18px 0 10px; font-size:18px}
-    h3{margin:16px 0 8px; font-size:16px}
-    .muted{color:var(--muted); line-height:1.6; margin:0}
-    .divider{height:1px; background:var(--line); margin:14px 0}
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-      margin-top:14px;
-    }
-    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
-
-    .mini{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top:12px;
-    }
-    @media (max-width: 700px){ .mini{grid-template-columns:1fr} }
-
-    .panel{
-      border:1px solid var(--line);
-      background:#fff;
-      border-radius:16px;
-      padding:16px;
-    }
-
-    ul{margin:0; padding-left:18px; color:var(--muted); line-height:1.7}
-
-    .callout{
-      border:1px solid var(--line);
-      background: #fbfcff;
-      border-radius:16px;
-      padding:14px;
-    }
-    .callout strong{display:block; margin-bottom:6px}
     .pill{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      border:1px solid var(--line);
+      padding:10px 14px;
       background:#fff;
+      border:1px solid var(--line);
       border-radius:999px;
-      padding:10px 12px;
-      font-weight:900;
+      text-decoration:none;
+      font-weight:600;
+      color:var(--text);
+      box-shadow: 0 2px 10px rgba(16, 24, 40, .04);
     }
-
-    /* Form */
-    label{display:block; margin:10px 0 6px; font-size:12px; color:var(--muted); font-weight:800}
-    input, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
+    .pill.primary{
+      background: linear-gradient(180deg, var(--blue) 0%, var(--blue2) 100%);
+      color:#fff;
+      border-color: transparent;
+    }
+    .hero{
+      margin-top:14px;
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{
+      padding:22px 18px 18px;
+      text-align:center;
+    }
+    .logo{
+      width:min(440px, 92%);
+      height:auto;
+      display:block;
+      margin:0 auto 10px;
+    }
+    h1{
+      margin:12px 0 8px;
+      font-size: clamp(28px, 4.2vw, 44px);
+      line-height:1.1;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      margin:0 auto 16px;
+      max-width: 54ch;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .cta-row{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius: 999px;
       border:1px solid var(--line);
       background:#fff;
-      color:var(--text);
-      outline:none;
+      text-decoration:none;
+      font-weight:800;
+      min-width: 170px;
     }
-    textarea{min-height:110px; resize:vertical}
-    .form-row{
+    .btn.primary{
+      background: linear-gradient(180deg, var(--blue) 0%, var(--blue2) 100%);
+      color:#fff;
+      border-color:transparent;
+    }
+    .grid{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
+      grid-template-columns: 1.15fr .85fr;
+      gap:14px;
+      margin-top:14px;
     }
-    @media (max-width: 520px){ .form-row{grid-template-columns:1fr} }
-    .form-actions{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap}
-    .note{font-size:12px; color:var(--muted); margin-top:8px}
-
-    footer{
-      margin:16px 0 6px;
-      color:var(--muted);
-      font-size:12px;
+    @media (max-width: 860px){
+      .grid{grid-template-columns: 1fr;}
+      header{flex-direction:column; align-items:stretch;}
+      .nav{justify-content:center;}
+    }
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 18px rgba(16,24,40,.06);
+      padding:18px;
+    }
+    .card h2{
+      margin:2px 0 8px;
+      font-size:22px;
+      letter-spacing:-.3px;
+    }
+    .muted{color:var(--muted)}
+    ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    li{margin:6px 0; color:var(--muted)}
+    .kpis{
       display:flex;
-      justify-content:space-between;
       gap:10px;
       flex-wrap:wrap;
+      margin-top:10px;
+      justify-content:center;
     }
+    .kpi{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius: 999px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:700;
+      color: var(--text);
+    }
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin:14px 0;
+    }
+    footer{
+      margin-top:18px;
+      color: var(--muted);
+      text-align:center;
+      font-size:14px;
+    }
+    footer a{color:var(--blue); text-decoration:none; font-weight:700;}
   </style>
 </head>
 
 <body>
   <div class="wrap">
+    <header>
+      <a class="brand" href="index.html" aria-label="Nantahala Interior Painting Home">
+        <img src="logo.png" alt="Nantahala Interior Painting logo" />
+        <strong>Nantahala Interior Painting</strong>
+      </a>
 
-    <!-- Top navigation -->
-    <div class="topbar">
-      <div class="nav">
-        <a class="btn" href="#top">Home</a>
-        <a class="btn" href="pricing.html">Pricing</a>
-      </div>
-      <div class="nav">
-        <a class="btn" href="tel:+16578310946">Call: 657-831-0946</a>
-        <a class="btn primary" href="sms:+16578310946?body=Hi%20Nantahala%20Interior%20Painting%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20My%20city%20is%20____.%20%0A%0AProject%3A%20____%20%0ARoom%20sizes%3A%20____%20%0AColor%20change%3A%20Yes%2FNo%20%0APhotos%3A%20(attach%20if%20you%20can)">Get Quote by Text</a>
-      </div>
-    </div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="pill" href="index.html">Home</a>
+        <a class="pill" href="pricing.html">Pricing</a>
+        <a class="pill" href="tel:+16578310946" aria-label="Call Nantahala Interior Painting">Call: 657-831-0946</a>
+        <a class="pill primary" href="sms:6578310946" aria-label="Text for a quote">Get Quote by Text</a>
+      </nav>
+    </header>
 
-    <main class="card" id="top">
-
-      <!-- Centered logo -->
-      <div class="logo-center">
-        <img src="logo.png" alt="Nantahala Interior Painting logo">
-      </div>
-
-      <!-- Hero -->
-      <div class="headline">
+    <section class="hero">
+      <div class="hero-inner">
+        <img class="logo" src="logo.png" alt="Nantahala Interior Painting — Clean. Simple. Interior Painting." />
         <h1>Professional Interior Painting in Franklin, NC</h1>
-        <p>
+        <p class="sub">
           Clean lines. Clean workspaces. A finish you’re proud to live with.
           Owner-operated interior painting with straightforward pricing and clear communication.
         </p>
 
-        <div class="quick-actions">
-          <a class="btn primary" href="sms:+16578310946?body=Hi%20Nantahala%20Interior%20Painting%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20My%20city%20is%20____.%20%0A%0AProject%3A%20____%20%0ARoom%20sizes%3A%20____%20%0AColor%20change%3A%20Yes%2FNo%20%0APhotos%3A%20(attach%20if%20you%20can)">Get a Quote by Text</a>
-          <a class="btn" href="#estimate">Online Estimate Form</a>
+        <div class="cta-row">
+          <a class="btn primary" href="sms:6578310946">Text for a Quote</a>
           <a class="btn" href="pricing.html">View Pricing</a>
+          <a class="btn" href="tel:+16578310946">Call</a>
         </div>
 
-        <div class="badges">
-          <div class="badge">✅ Free estimates</div>
-          <div class="badge">✅ Tidy, respectful jobsite</div>
-          <div class="badge">✅ Clear scope & pricing</div>
+        <div class="kpis" aria-label="Highlights">
+          <span class="kpi">✅ Free estimates</span>
+          <span class="kpi">✅ Tidy, respectful jobsite</span>
+          <span class="kpi">✅ Clear scope & pricing</span>
         </div>
       </div>
+    </section>
 
-      <!-- Main content grid -->
-      <div class="grid section">
+    <section class="grid">
+      <div class="card">
+        <h2>Services</h2>
+        <p class="muted">Interior-only work focused on clean results and a smooth process.</p>
+        <ul>
+          <li>Walls, ceilings, trim, and doors</li>
+          <li>Color changes & refresh coats</li>
+          <li>Minor drywall patching & prep</li>
+          <li>Caulk touch-ups & small repairs (as needed)</li>
+          <li>Cabinet repainting (case-by-case)</li>
+        </ul>
 
-        <!-- Left column -->
-        <section class="panel">
-          <h2>Services</h2>
-          <ul>
-            <li>Walls, ceilings, trim, doors</li>
-            <li>Color changes & refresh coats</li>
-            <li>Minor drywall patching & prep</li>
-            <li>Caulk touch-ups & small repairs (as needed)</li>
-            <li>Cabinet repainting (case-by-case)</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <h2>Service Area</h2>
-          <p class="muted">
-            <strong>Based in Franklin, North Carolina.</strong>
-            Nantahala Interior Painting proudly provides professional interior painting services in
-            <strong>Franklin, NC</strong> and surrounding areas including
-            <strong>Highlands</strong>, <strong>Cashiers</strong>, <strong>Sylva</strong>, and <strong>Bryson City</strong>.
-          </p>
-
-          <p class="muted" style="margin-top:8px;">
-            If you're located in or near Macon County, Jackson County, or Swain County, call or text to confirm availability.
-          </p>
-
-          <div class="mini">
-            <div class="callout">
-              <strong>Fastest way to get a quote</strong>
-              Text 2–4 photos + room sizes, and tell me if it’s a color change.
-            </div>
-            <div class="callout">
-              <strong>Phone</strong>
-              <span class="pill">📞 <a href="tel:+16578310946" style="text-decoration:none;">657-831-0946</a></span>
-              <div class="note">Call or text anytime. If I miss you, I’ll get back to you ASAP.</div>
-            </div>
-          </div>
-
-          <div class="divider"></div>
-
-          <h2>Transparent Pricing</h2>
-          <p class="muted">
-            Want numbers before we talk? I keep pricing simple and consistent.
-            View the full pricing page for room pricing, patching, trim, ceilings, and policies.
-          </p>
-
-          <div class="quick-actions" style="justify-content:flex-start; margin-top:12px;">
-            <a class="btn" href="pricing.html">View Pricing</a>
-            <a class="btn" href="NIPLLC%20Price%20Sheet.pdf" target="_blank" rel="noopener">Download Price Sheet (PDF)</a>
-          </div>
-
-          <p class="note">10% senior & veteran discount available.</p>
-        </section>
-
-        <!-- Right column -->
-        <aside class="panel">
-          <h2>Simple Policies (No Surprises)</h2>
-          <ul>
-            <li><strong>Deposit:</strong> 50% due to start, 50% on completion</li>
-            <li><strong>Coverage:</strong> Paint applied for uniform coverage <strong>up to 2 coats</strong></li>
-            <li><strong>Extra coats:</strong> Additional coats beyond 2 may add charges in the estimate</li>
-            <li><strong>Minimum job charge:</strong> $200 minimum (only applies if project total is under $200)</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <h2>What’s Included in Every Job</h2>
-          <ul>
-            <li>Light surface preparation</li>
-            <li>Nail hole filling</li>
-            <li>Caulking of trim gaps & cracks</li>
-            <li>Floor & furniture protection</li>
-            <li>Standard consumables (rollers, tape, caulk)</li>
-            <li>Full cleanup</li>
-          </ul>
-
-          <div class="divider"></div>
-
-          <h2>Get a Quote by Text</h2>
-          <p class="muted">
-            Text is the fastest way to get on the schedule. Send your city, room sizes, and a few photos.
-          </p>
-          <div class="quick-actions" style="justify-content:flex-start; margin-top:12px;">
-            <a class="btn primary" href="sms:+16578310946?body=Hi%20Nantahala%20Interior%20Painting%20%E2%80%94%20I%E2%80%99d%20like%20a%20quote.%20My%20city%20is%20____.%20%0A%0AProject%3A%20____%20%0ARoom%20sizes%3A%20____%20%0AColor%20change%3A%20Yes%2FNo%20%0APhotos%3A%20(attach%20if%20you%20can)">Text for Quote</a>
-            <a class="btn" href="tel:+16578310946">Call</a>
-          </div>
-        </aside>
-
-      </div>
-
-      <!-- Estimate form -->
-      <section id="estimate" class="section">
         <div class="divider"></div>
-        <h2>Request a Free Estimate</h2>
+
+        <h2>Fastest way to get a quote</h2>
         <p class="muted">
-          Fill this out and I’ll reach out. If you want the fastest quote, text photos too.
+          Text your <strong>city</strong>, <strong>room sizes</strong>, and <strong>2–4 photos</strong>.
+          Let me know if it’s a <strong>color change</strong>.
         </p>
 
-        <!-- NETLIFY FORM (works automatically on Netlify) -->
-     <div style="text-align:center; margin-top:30px;">
-  <a href="sms:6578310946" style="
-    display:inline-block;
-    padding:16px 28px;
-    background:#1e63d6;
-    color:white;
-    font-weight:600;
-    border-radius:12px;
-    text-decoration:none;
-    font-size:18px;
-  ">
-    Text 657-831-0946 for a Free Estimate
-  </a>
-</div>
-      </section>
+        <div class="cta-row">
+          <a class="btn primary" href="sms:6578310946">Text for Quote</a>
+          <a class="btn" href="tel:+16578310946">Call</a>
+        </div>
+      </div>
 
-    </main>
+      <aside class="card">
+        <h2>Service Area</h2>
+        <p class="muted">
+          Based in <strong>Franklin, North Carolina</strong>.
+          Serving Franklin and nearby areas including <strong>Highlands</strong>, <strong>Cashiers</strong>, <strong>Sylva</strong>, and <strong>Bryson City</strong>.
+        </p>
+        <p class="muted">
+          If you’re in or near <strong>Macon County</strong>, <strong>Jackson County</strong>, or <strong>Swain County</strong>, text or call to confirm availability.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Transparent Pricing</h2>
+        <p class="muted">
+          Want numbers before we talk? Pricing is kept simple and consistent.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="pricing.html">View Pricing</a>
+          <a class="btn" href="NIPLLC Price Sheet.pdf">Download Price Sheet (PDF)</a>
+        </div>
+
+        <p class="muted" style="margin-top:10px;">10% senior & veteran discount available.</p>
+
+        <div class="divider"></div>
+
+        <h2>Simple Policies (No Surprises)</h2>
+        <ul>
+          <li><strong>Deposit:</strong> 50% due to start, 50% on completion</li>
+          <li><strong>Coverage:</strong> Paint applied for uniform coverage <strong>up to 2 coats</strong></li>
+          <li><strong>Extra coats:</strong> Additional coats beyond 2 may add charges in the estimate</li>
+          <li><strong>Minimum job charge:</strong> $200 minimum (only applies if project total is under $200)</li>
+        </ul>
+      </aside>
+    </section>
 
     <footer>
       <div>© <span id="y"></span> Nantahala Interior Painting</div>
       <div>Franklin, NC • Highlands • Cashiers • Sylva • Bryson City • <a href="tel:+16578310946">657-831-0946</a></div>
     </footer>
-
   </div>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
